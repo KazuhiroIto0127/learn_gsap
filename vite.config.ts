@@ -5,5 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
-  base: command === 'build' ? '/learn_gsap/' : '/', // ビルド時のみGitHub Pages用のパスを設定
+  base: command === 'build' ? '/learn_gsap/' : '/', // GitHubリポジトリ名に合わせて変更してください
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+  },
 }))
