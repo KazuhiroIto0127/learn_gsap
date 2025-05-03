@@ -3,11 +3,11 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: command === 'build' ? '/learn_gsap/' : '/', // GitHubリポジトリ名に合わせて変更してください
+  base: '/learn_gsap/', // GitHubリポジトリ名に合わせて変更してください
   build: {
     outDir: 'dist',
     sourcemap: true,
   },
-}))
+})
