@@ -28,9 +28,9 @@ const Page5 = () => {
           ref={textRef}
           className="text-9xl font-dela-gothic"
         >
-          テストだよ これはGSAPのテストだよ
+          テストだよ これは<span className="text-red-500">GSAP</span>のテストだよ
           こんにちは〜世界の皆さん！！！！！
-          Hello World yeah 🧜
+          <span className="text-blue-500">Hello World yeah 🧜</span>
         </h1>
       </div>
     </div>
