@@ -26,9 +26,9 @@ const Page5 = () => {
       <div className="text-center">
         <h1
           ref={textRef}
-          className="text-9xl font-bold"
+          className="text-9xl font-dela-gothic"
         >
-          テストだよ　これはGSAPのテストだよ
+          テストだよ これはGSAPのテストだよ
           こんにちは〜世界の皆さん！！！！！
           Hello World yeah 🧜
         </h1>
