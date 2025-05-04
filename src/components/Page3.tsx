@@ -27,7 +27,7 @@ const Page3 = () => {
       {[1, 2, 3, 4, 5].map((item, index) => (
         <div
           key={item}
-          ref={el => itemsRef.current[index] = el}
+          ref={el => { itemsRef.current[index] = el }}
           className="w-64 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold"
         >
           Item {item}
