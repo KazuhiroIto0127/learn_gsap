@@ -26,11 +26,11 @@ const Page5 = () => {
       <div className="text-center">
         <h1
           ref={textRef}
-          className="text-6xl font-bold bg-clip-text bg-linear-to-r from-purple-400 to-pink-600"
+          className="text-9xl font-bold"
         >
           テストだよ　これはGSAPのテストだよ
           こんにちは〜世界の皆さん！！！！！
-          world hello yeah 🧜
+          Hello World yeah 🧜
         </h1>
       </div>
     </div>
