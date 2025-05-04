@@ -33,6 +33,9 @@ const Header = () => {
           <li>
             <Link to="/page4" className="text-gray-700 hover:text-blue-500 transition-colors">Page 4</Link>
           </li>
+          <li>
+            <Link to="/page5" className="text-gray-700 hover:text-blue-500 transition-colors">Page 5</Link>
+          </li>
         </ul>
       </nav>
     </header>
