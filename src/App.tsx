@@ -1,38 +1,24 @@
-import { useRef } from 'react'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-
-gsap.registerPlugin(useGSAP);
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Page1 from './components/Page1'
+import Page2 from './components/Page2'
+import Page3 from './components/Page3'
+import Page4 from './components/Page4'
 
 function App() {
-  const container = useRef<HTMLDivElement>(null);
-  const circle = useRef<HTMLDivElement>(null);
-  const box = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (box.current && circle.current) {
-        gsap.to(box.current, { rotation: "+=360", duration: 3 });
-        gsap.to(circle.current, { rotation: "-=360", duration: 3 });
-      }
-    },
-    { scope: container }
-  );
-
   return (
-    <>
-      <div ref={container} className="w-full h-full pt-5 px-6">
-        <div className="flex items-center justify-center w-32 h-32 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl"
-             ref={box}>
-          selector
-        </div>
-        <div className='m-4'></div>
-        <div className="flex items-center justify-center w-32 h-32 bg-gradient-to-b rounded-full from-yellow-400 to-red-500"
-             ref={circle}>
-          Circle
-        </div>
-      </div>
-    </>
+    <div className="min-h-screen bg-gray-100">
+      <Header />
+      <main className="pt-20">
+        <Routes>
+          <Route path="/" element={<Page1 />} />
+          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
+          <Route path="/page4" element={<Page4 />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
